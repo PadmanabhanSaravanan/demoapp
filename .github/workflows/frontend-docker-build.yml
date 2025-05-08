@@ -10,6 +10,7 @@ jobs:
     env:
       IMAGE_NAME: task-frontend
       DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKERHUB_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
     steps:
     - name: Checkout code
