@@ -8,7 +8,7 @@ const distPath = path.join(__dirname, 'dist/task-app');
 app.use(express.static(distPath));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(distPath, 'index.html'));
+  res.sendFile(path.join(distPath, 'browser/index.html'));
 });
 
 app.listen(port, '0.0.0.0', () => {
