@@ -3,12 +3,12 @@ const path = require('path');
 const app = express();
 
 const port = process.env.PORT || 8080;
-const distFolder = path.join(__dirname, 'dist/task-app');
+const distPath = path.join(__dirname, 'dist/task-app');
 
-app.use(express.static(distFolder));
+app.use(express.static(distPath));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(distFolder, 'index.html'));
+  res.sendFile(path.join(distPath, 'index.html'));
 });
 
 app.listen(port, '0.0.0.0', () => {
